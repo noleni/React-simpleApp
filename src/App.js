@@ -10,7 +10,6 @@ function App(props) {
 
   const addUserToUsersList = (dataName, dataAge) => {
     setUsersList(prevList => [...prevList, {id:usersList.length+1, name:dataName, age:dataAge }])
-    console.log(usersList)
   };
 
 
