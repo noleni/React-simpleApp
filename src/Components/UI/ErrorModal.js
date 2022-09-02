@@ -16,7 +16,7 @@ const ModalOverlay = (props) => {
     </header>
     <p className={styles.content}>{props.message}</p>
     <footer className={styles.actions}>
-      <Button>Okay !</Button>
+      <Button onClick={props.onClick}>Okay !</Button>
     </footer>
   </Card>
   );
@@ -30,7 +30,7 @@ const ErrorModal = (props) => {
         document.getElementById("backdrop-root")
       )};
       {ReactDOM.createPortal(
-        <ModalOverlay header={props.header} message={props.message}></ModalOverlay>,
+        <ModalOverlay header={props.header} message={props.message} onClick={props.onClick}></ModalOverlay>,
         document.getElementById("overlay-root")
       )};
     </React.Fragment>
